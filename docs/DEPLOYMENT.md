@@ -25,19 +25,52 @@ This guide details how to deploy the **AgroAI Crop Advisory Assistant** to produ
 
 ---
 
-## 2. Frontend Deployment (Vercel)
+## 2. Deploying on Vercel as a Multi-Service Project
 
-1. Connect your repository to [Vercel](https://vercel.com).
-2. Configure project settings:
-   - **Framework Preset**: Vite
-   - **Root Directory**: `client`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-3. Add Environment Variables:
-   - `VITE_API_BASE_URL`: `https://your-backend-service.onrender.com/api/v1`
-   - `VITE_SUPABASE_URL`: `https://<your-project-id>.supabase.co`
-   - `VITE_SUPABASE_ANON_KEY`: `<your-supabase-anon-key>`
-4. Deploy.
+This repository includes a [`vercel.json`](../vercel.json) that configures Vercel Services to deploy both the frontend (`client`) and backend (`server`) together as a single project with shared routing and one domain:
+
+```json
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "client": {
+      "root": "client",
+      "framework": "vite"
+    },
+    "server": {
+      "root": "server",
+      "framework": "express",
+      "entrypoint": "src/server.js"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "server"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "client"
+      }
+    }
+  ]
+}
+```
+
+### Deployment Steps:
+1. Connect your GitHub repository (`https://github.com/subash2022s-commits/co0p.git`) to [Vercel](https://vercel.com).
+2. Vercel will automatically detect `vercel.json` and build both the `client` (Vite) and `server` (Express) services.
+3. Add your production Environment Variables in the Vercel Project Dashboard (**Settings -> Environment Variables**):
+   - `SUPABASE_URL`: `https://<your-project-id>.supabase.co`
+   - `SUPABASE_ANON_KEY`: `<your-supabase-anon-key>`
+   - `SUPABASE_SERVICE_ROLE_KEY`: `<your-supabase-service-role-key>`
+   - `GEMINI_API_KEY`: `<your-google-ai-studio-gemini-key>`
+   - `GEMINI_MODEL`: `gemini-3.8-flash`
+   - `NODE_ENV`: `production`
+4. Click **Deploy**. Both the client and API will be available under your primary Vercel domain without requiring separate subdomains or manual CORS management!
 
 ---
 
