@@ -1,0 +1,95 @@
+export const INDIAN_STATES = [
+  'Andhra Pradesh',
+  'Assam',
+  'Bihar',
+  'Gujarat',
+  'Haryana',
+  'Karnataka',
+  'Kerala',
+  'Madhya Pradesh',
+  'Maharashtra',
+  'Odisha',
+  'Punjab',
+  'Rajasthan',
+  'Tamil Nadu',
+  'Telangana',
+  'Uttar Pradesh',
+  'West Bengal',
+];
+
+export const DISTRICTS_BY_STATE = {
+  Karnataka: ['Mandya', 'Mysuru', 'Belagavi', 'Hassan', 'Dharwad', 'Ballari', 'Raichur', 'Tumakuru', 'Shimoga', 'Chikkamagaluru', 'Kolar'],
+  Maharashtra: ['Pune', 'Nashik', 'Nagpur', 'Aurangabad', 'Solapur', 'Kolhapur', 'Amravati', 'Ahmednagar'],
+  'Tamil Nadu': ['Coimbatore', 'Thanjavur', 'Madurai', 'Salem', 'Tiruchirappalli', 'Erode', 'Dindigul'],
+  'Andhra Pradesh': ['Guntur', 'Krishna', 'Kurnool', 'Anantapur', 'East Godavari', 'West Godavari'],
+  Telangana: ['Warangal', 'Nizamabad', 'Karimnagar', 'Khammam', 'Nalgonda', 'Mahabubnagar'],
+  Punjab: ['Ludhiana', 'Amritsar', 'Patiala', 'Jalandhar', 'Bathinda', 'Ferozepur'],
+  Haryana: ['Karnal', 'Hisar', 'Ambala', 'Sirsa', 'Kurukshetra', 'Rohtak'],
+  'Uttar Pradesh': ['Varanasi', 'Lucknow', 'Kanpur', 'Agra', 'Meerut', 'Gorakhpur', 'Prayagraj'],
+  Gujarat: ['Ahmedabad', 'Rajkot', 'Surat', 'Vadodara', 'Bhavnagar', 'Junagadh'],
+  'Madhya Pradesh': ['Indore', 'Bhopal', 'Ujjain', 'Jabalpur', 'Gwalior', 'Hoshangabad'],
+  Bihar: ['Patna', 'Gaya', 'Muzaffarpur', 'Bhagalpur', 'Darbhanga'],
+  Rajasthan: ['Jaipur', 'Jodhpur', 'Kota', 'Udaipur', 'Bikaner', 'Sri Ganganagar'],
+  'West Bengal': ['Bardhaman', 'Murshidabad', 'Hooghly', 'Nadia', 'Bankura'],
+  Kerala: ['Palakkad', 'Wayanad', 'Idukki', 'Thrissur', 'Kottayam'],
+  Assam: ['Kamrup', 'Nagaon', 'Sonitpur', 'Barpeta', 'Cachar'],
+  Odisha: ['Cuttack', 'Bhubaneswar', 'Sambalpur', 'Bargarh', 'Ganjam'],
+};
+
+export const SOIL_TYPES = [
+  'Red Sandy Loam',
+  'Red Clay Loam',
+  'Deep Black Soil (Vertisol)',
+  'Medium Black Soil',
+  'Alluvial Soil',
+  'Sandy Loam',
+  'Clayey Soil',
+  'Laterite Soil',
+  'Coastal Sandy Soil',
+];
+
+export const CROPS_CATALOG = [
+  'Paddy (Rice)',
+  'Wheat',
+  'Maize (Corn)',
+  'Finger Millet (Ragi)',
+  'Sorghum (Jowar)',
+  'Pearl Millet (Bajra)',
+  'Cotton',
+  'Sugarcane',
+  'Groundnut',
+  'Soybean',
+  'Pigeon Pea (Red Gram / Tur)',
+  'Bengal Gram (Chickpea / Chana)',
+  'Green Gram (Moong)',
+  'Black Gram (Urad)',
+  'Tomato',
+  'Onion',
+  'Chilli',
+  'Potato',
+  'Banana',
+  'Arecanut',
+  'Coconut',
+];
+
+export const GROWTH_STAGES = [
+  'Land Preparation',
+  'Seedling / Nursery',
+  'Vegetative (Early Stage)',
+  'Active Tillering / Branching',
+  'Panicle Initiation / Budding',
+  'Flowering',
+  'Fruit / Pod Development',
+  'Grain Filling / Maturity',
+  'Harvesting',
+];
+
+export const IRRIGATION_METHODS = [
+  'Drip Irrigation',
+  'Sprinkler Irrigation',
+  'Furrow / Ridge Irrigation',
+  'Basin / Border Strip',
+  'Flood / Surface Irrigation',
+  'Rainfed (Dependent on Monsoon)',
+];
+
